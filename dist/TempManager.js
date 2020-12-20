@@ -3,7 +3,7 @@ class TempManager {
         this.cityData = []
     }
 
-    async getDataFromDB(){//get data from DB
+    async getDataFromDB(){
         try{
             const cities = await $.get(`/cities`)
             cities.forEach(c => this.cityData.unshift(c))
@@ -14,7 +14,7 @@ class TempManager {
         }
     }   
 
-    async getCityData(city){// send rqst to the external api and get info on city 
+    async getCityData(city){ 
         try{
             const cityWeather = await $.get(`/city/${city}`)
             this.cityData.unshift(cityWeather)                        
