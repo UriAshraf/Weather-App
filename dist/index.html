@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Weather App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" >
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+<body>
+
+    <div id="input-container">
+        <input id="input" type="text" placeholder="City name">
+        <button class="search" type="submit" onclick ="handleSearch()"><i class="fas fa-search"></i></button>
+    </div>
+
+    <div id= "cities-container"></div>
+
+
+
+
+
+    <script id="cities-template" type="text/x-handlebars-template">
+        {{#each cities}}
+            <div id= {{name}} class="cityWeather">
+                <div class="buttons">
+                    <button class="save" type="button"><i class="fas fa plus-circle">save</i></button>
+                    <button class="delete" type="button"><i class="fas fa minus-circle">delete</i></button>
+                </div>
+                <div class="name">{{name}}</div>
+                <div class="temp">{{temp}}&#xb0</div>
+                <div class="condition">{{condition}}</div>
+                <div class="pic">
+                    <img src = {{conditionPic}}>
+                </div>
+                
+            </div>
+        {{/each}}    
+
+    </script>
+
+    
+
+
+
+
+
+
+
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="TempManager.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'montserrat', sans-serif;
+    /* background-image: url('https://s7d2.scene7.com/is/image/TWCNews/sun_jpg_jpg-1?wid=1250&hei=703&$wide-bg$'); */
+    /* background-size : 100vh ; */
+}
